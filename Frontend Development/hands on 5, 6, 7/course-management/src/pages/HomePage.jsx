@@ -1,0 +1,10 @@
+const HomePage = () => {
+  return (
+    <section>
+      <h2>Welcome to the Student Portal</h2>
+      <p>Browse courses, enroll, and view your profile.</p>
+    </section>
+  )
+}
+
+export default HomePage

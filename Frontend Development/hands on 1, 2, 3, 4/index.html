@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Axios CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <h2 class="site-title">Student Portal</h2>
+
+        <nav>
+
+            <div class="menu-toggle">
+                ☰ Menu
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Grades</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- Hero -->
+
+    <section id="hero">
+
+        <h1>Welcome to Student Portal</h1>
+
+        <p>
+            Learn modern web development with JavaScript and APIs.
+        </p>
+
+        <button>
+            Explore Courses
+        </button>
+
+    </section>
+
+    <!-- Courses -->
+
+    <section id="courses">
+
+        <h2>Available Courses</h2>
+
+        <input
+            type="text"
+            id="search-courses"
+            placeholder="Search courses..."
+        >
+
+        <button id="sort-btn">
+            Sort by Credits
+        </button>
+
+        <p id="loading">
+            Loading courses...
+        </p>
+
+        <div class="course-grid">
+
+        </div>
+
+        <p id="total-credits"></p>
+
+        <div id="selected-course"></div>
+
+    </section>
+
+    <!-- Notifications -->
+
+    <section id="notifications">
+
+        <h2>Notifications</h2>
+
+        <p id="spinner">
+            Loading Posts...
+        </p>
+
+        <div id="notification-list">
+
+        </div>
+
+        <button
+            id="retry-btn"
+            style="display:none;"
+        >
+            Retry
+        </button>
+
+    </section>
+
+    <footer>
+
+        <p>
+            © 2026 Student Portal
+        </p>
+
+    </footer>
+
+    <script
+        type="module"
+        src="./script.js">
+    </script>
+
+</body>
+
+</html>

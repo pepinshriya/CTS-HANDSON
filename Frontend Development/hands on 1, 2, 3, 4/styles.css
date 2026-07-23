@@ -1,0 +1,420 @@
+/* =========================================
+   CSS Reset
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =========================================
+   Body
+========================================= */
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6f8;
+    color:#333;
+    line-height:1.6;
+}
+
+/* =========================================
+   Header
+========================================= */
+
+header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#1e3a8a;
+    color:white;
+
+    padding:20px;
+
+}
+
+.site-title{
+
+    font-size:clamp(1.5rem,3vw,2.5rem);
+
+}
+
+/* =========================================
+   Navigation
+========================================= */
+
+nav{
+
+    display:flex;
+    align-items:center;
+
+}
+
+.menu-toggle{
+
+    display:block;
+    font-weight:bold;
+
+}
+
+.nav-links{
+
+    display:none;
+    list-style:none;
+
+}
+
+.nav-links li{
+
+    margin-left:20px;
+
+}
+
+.nav-links a{
+
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+
+}
+
+/* =========================================
+   Hero
+========================================= */
+
+#hero{
+
+    min-height:40vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+#hero h1{
+
+    margin-bottom:20px;
+
+}
+
+#hero p{
+
+    margin-bottom:20px;
+    max-width:700px;
+
+}
+
+#hero button{
+
+    padding:12px 25px;
+
+    border:none;
+
+    background:#1e3a8a;
+
+    color:white;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+}
+
+#hero button:hover{
+
+    background:#0f2d78;
+
+}
+
+/* =========================================
+   Courses
+========================================= */
+
+#courses{
+
+    padding:40px 20px;
+
+}
+
+#courses h2{
+
+    margin-bottom:20px;
+
+}
+
+#search-courses{
+
+    width:100%;
+    max-width:400px;
+
+    padding:10px;
+
+    margin-bottom:15px;
+
+}
+
+#sort-btn{
+
+    padding:10px 20px;
+
+    margin-bottom:20px;
+
+    cursor:pointer;
+
+}
+
+/* =========================================
+   Grid
+========================================= */
+
+.course-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:20px;
+
+}
+
+/* =========================================
+   Course Card
+========================================= */
+
+.course-card{
+
+    min-height:180px;
+
+    background:white;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.course-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.course-card h3{
+
+    margin-bottom:10px;
+
+}
+
+.course-card p{
+
+    margin-bottom:10px;
+
+}
+
+/* =========================================
+   Total Credits
+========================================= */
+
+#total-credits{
+
+    margin-top:20px;
+
+    font-weight:bold;
+
+    color:#1e3a8a;
+
+}
+
+/* =========================================
+   Selected Course
+========================================= */
+
+#selected-course{
+
+    margin-top:20px;
+
+    font-weight:bold;
+
+    color:green;
+
+}
+
+/* =========================================
+   Loading
+========================================= */
+
+#loading{
+
+    display:none;
+
+    font-weight:bold;
+
+    color:#1e3a8a;
+
+    margin-bottom:20px;
+
+}
+
+/* =========================================
+   Notifications
+========================================= */
+
+#notifications{
+
+    padding:40px 20px;
+
+}
+
+#notifications h2{
+
+    margin-bottom:20px;
+
+}
+
+#notification-list{
+
+    display:grid;
+
+    gap:20px;
+
+}
+
+/* =========================================
+   Notification Card
+========================================= */
+
+.notification-card{
+
+    background:white;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+
+}
+
+/* =========================================
+   Spinner
+========================================= */
+
+#spinner{
+
+    display:none;
+
+    font-weight:bold;
+
+    color:#1e3a8a;
+
+    margin-bottom:20px;
+
+}
+
+/* =========================================
+   Retry Button
+========================================= */
+
+#retry-btn{
+
+    padding:10px 20px;
+
+    margin-top:20px;
+
+    cursor:pointer;
+
+}
+
+/* =========================================
+   Footer
+========================================= */
+
+footer{
+
+    background:#1e3a8a;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+    margin-top:40px;
+
+}
+
+/* =========================================
+   Tablet
+========================================= */
+
+@media(min-width:768px){
+
+    .menu-toggle{
+
+        display:none;
+
+    }
+
+    .nav-links{
+
+        display:flex;
+
+    }
+
+    .course-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    #notification-list{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* =========================================
+   Desktop
+========================================= */
+
+@media(min-width:1024px){
+
+    #hero{
+
+        padding:80px;
+
+    }
+
+    .course-grid{
+
+        grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    }
+
+    #notification-list{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+}
